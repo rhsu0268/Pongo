@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-
-    return "Home Page";
-    //return view('welcome');
-});
+Route::get('/', 'IndexController@getIndex');
 
 
 Route::get('/createAccount', function() {
