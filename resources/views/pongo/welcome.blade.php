@@ -1,12 +1,14 @@
 @extends('layouts.master')
 
 @section('title')
-    All Books
+    Pongo
 @stop
 
 @section('content')
 
-    <h1>All Books</h1>
+    <h1>Welcome to Pongo!</h1>
+    <link href="/master.css" type='text/css' rel='stylesheet'>
+    <img src="/pongo.gif" alt="Pongo">
 
 
 
