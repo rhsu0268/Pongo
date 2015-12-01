@@ -33,3 +33,9 @@ Route::post('/signIn', function() {
 Route::get('userHomePage', function() {
     return "User Home Page";
 });
+
+Route::get('/addItem', 'AddItemController@getPage');
+
+Route::get('/browseItems', function() {
+    return "Browse Item Page";
+});

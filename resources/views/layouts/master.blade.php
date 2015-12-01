@@ -40,10 +40,10 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Add</a></li>
-              <li><a href="#">Browse</a></li>
-              
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/addItem">Add</a></li>
+              <li><a href="/browseItems">Browse</a></li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/createAccount">Create Account</a></li>
