@@ -20,38 +20,26 @@ such as a page specific styesheets.
 @section('content')
  	<div class="container">
         <div class="content">
-            <h1>Lorem Ipsum Tool</h1>
-            <div class="jumbotron">
-                <h1>Generate some Lorem Ipsum text for your page...</h1>
-                <p>How many paragraphs of Lorem Ipsum text do you want?
-                </p>
-            </div>
-            <div class="lorem">
-                <div class="col-lg-6">
+            <form>
+              <div class="form-group">
+                <label for="Item">Item</label>
+                <input type="text" class="form-control" id="item" placeholder="Item">
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" class="form-control" id="category" placeholder="Category">
+              </div>
+              <div class="form-group">
+                <label for="category">Price</label>
+                <input type="text" class="form-control" id="category" placeholder="Price">
+              </div>
+              <div class="form-group">
+               <label for="description">Comment:</label>
+               <textarea class="form-control" rows="5" id="description">Enter description for your item...</textarea>
+             </div>
 
-                    @if(count($errors) > 0)
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                    @endif
-
-                    <form method="POST" action="/loremToolPage">
-                        <input type='hidden' value='{{ csrf_token() }}' name='_token'>
-                        <div class="form-group">
-                            <label for="number">Number of Paragraphs (Max. 88)</label>
-                            <input type="number" class="form-control" id="paragraphs" placeholder="Number of Paragraphs" name="number">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Get Lorem Text</button>
-                        </form>
-                        <br>
-                    <button type="back" class="btn btn-primary" id="home">Go Back</button>
-                </div>
-
-            </div>
-            <br>
-
+              <button type="submit" class="btn btn-default">Add Item</button>
+            </form>
 
         </div>
     </div>
