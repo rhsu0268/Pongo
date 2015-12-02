@@ -35,7 +35,4 @@ Route::get('userHomePage', function() {
 });
 
 Route::get('/addItem', 'AddItemController@getPage');
-
-Route::get('/browseItems', function() {
-    return "Browse Item Page";
-});
+Route::get('/browseItems', 'BrowseItemsController@getPage');
