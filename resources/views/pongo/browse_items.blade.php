@@ -22,6 +22,16 @@ such as a page specific styesheets.
         <div class="content">
             <h1>Items For Sale</h1>
 
+            <table class="table table-striped">
+                <tr>
+                    <td>Item</td>
+                    <td>Category</td>
+                    <td>One Line Description</td>
+                    <td>Price</td>
+                    <td>Options</td>
+                </tr>
+            </table>
+
         </div>
     </div>
 @stop
