@@ -46,7 +46,7 @@
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/createAccount">Create Account</a></li>
+              <li><a href="/register">Create Account</a></li>
               <li><a href="/signIn">Sign In</a></li>
 
             </ul>
