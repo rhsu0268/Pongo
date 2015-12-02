@@ -24,9 +24,6 @@ Route::get('/login', 'Auth\AuthController@getLogin');
 Route::post('/login', 'Auth\AuthController@postLogin');
 
 
-Route::get('userHomePage', function() {
-    return "User Home Page";
-});
-
+Route::get('/myspace', 'MySpaceController@getPage');
 Route::get('/addItem', 'AddItemController@getPage');
 Route::get('/browseItems', 'BrowseItemsController@getPage');

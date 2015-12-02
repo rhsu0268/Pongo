@@ -40,7 +40,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/myspace">MySpace</a></li>
               <li><a href="/addItem">Add</a></li>
               <li><a href="/browseItems">Browse</a></li>
 
