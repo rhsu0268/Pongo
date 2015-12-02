@@ -30,6 +30,13 @@ such as a page specific styesheets.
                     <td>Price</td>
                     <td>Options</td>
                 </tr>
+                <tr>
+                    <td>Water Bottle</td>
+                    <td>Daily Life</td>
+                    <td>A Brand New Water Bottle 9 Ounces</td>
+                    <td>$3.99</td>
+                    <td></td>
+                </tr>
             </table>
 
         </div>
