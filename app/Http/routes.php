@@ -17,13 +17,12 @@ Route::get('/', 'IndexController@getIndex');
 Route::get('/register', 'Auth\AuthController@getRegister');
 Route::post('/register', 'Auth\AuthController@postRegister');
 
-Route::get('/signIn', function() {
-    return "Sign in";
-});
+# Show login form
+Route::get('/login', 'Auth\AuthController@getLogin');
 
-Route::post('/signIn', function() {
-    return "Sign in (post)";
-});
+# Process login form
+Route::post('/login', 'Auth\AuthController@postLogin');
+
 
 Route::get('userHomePage', function() {
     return "User Home Page";
