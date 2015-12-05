@@ -27,4 +27,4 @@ Route::post('/login', 'Auth\AuthController@postLogin');
 Route::get('/myspace', 'MySpaceController@getPage');
 Route::get('/addItem', 'AddItemController@getPage');
 Route::get('/browseItems', 'BrowseItemsController@getPage');
-Route::get('/details/1', 'DetailsController@getPage')
+Route::get('/details/1', 'DetailsController@getPage');
