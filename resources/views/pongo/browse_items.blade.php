@@ -13,7 +13,7 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific styesheets.
 --}}
 @section('head')
-    <!--<link href="/css/loremTool.css" type='text/css' rel='stylesheet'>-->
+    <link href="/browse_items.css" type='text/css' rel='stylesheet'>
 @stop
 
 
@@ -35,12 +35,13 @@ such as a page specific styesheets.
                     <td>Daily Life</td>
                     <td>A Brand New Water Bottle 9 Ounces</td>
                     <td>$3.99</td>
-                    <td></td>
+                    <td><button type="button" class="btn btn-info" id="selectedItem">More Info</button></td>
                 </tr>
             </table>
 
         </div>
     </div>
+
 @stop
 
 {{--
@@ -49,5 +50,5 @@ Use it to add specific things that *this* View needs at the end of the body,
 such as a page specific JavaScript files.
 --}}
 @section('body')
-    <script src="/js/loremTool.js"></script>
+    <script src="/js/browse.js"></script>
 @stop
