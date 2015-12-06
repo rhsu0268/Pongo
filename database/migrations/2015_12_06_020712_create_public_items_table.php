@@ -43,6 +43,7 @@ class CreatePublicItemsTable extends Migration
      */
     public function down()
     {
-        //
+        // drop the public_items table
+        Schema::drop('public_items');
     }
 }
