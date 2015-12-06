@@ -66,7 +66,7 @@ such as a page specific styesheets.
                 This is a very good bottle.
               </div>
             </div>
-
+            <button type="button" class="btn btn-info" id="buy">Buy</button>
 
 
 
