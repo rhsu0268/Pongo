@@ -21,9 +21,19 @@ class DetailsController extends Controller {
     /**
     * Responds to requests to
     */
-    public function getPage() {
+    public function getPage($id = null) {
 
-        return view('pongo.details');
+        //echo $id;
+
+        // get the item
+        $item = \App\PublicItem::where('id', '=', $id)->get();
+
+        $itemAsArray = $item->toArray();
+        //dump($itemAsArray[0]);
+        $itemObject = (object)$itemAsArray[0];
+        //dump($itemObject);
+
+        return view('pongo.details')->with('item', $itemObject);
     }
 
     public function postPage(Request $request)

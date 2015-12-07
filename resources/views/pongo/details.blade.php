@@ -18,60 +18,56 @@ such as a page specific styesheets.
 
 
 @section('content')
- 	<div class="container">
-        <div class="content">
-            <h1>Item Description</h1>
-
-            <div class="panel panel-primary">
-              <div class="panel-heading">
+<div class="container">
+    <div class="content">
+        <h1>Item Description</h1>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
                 <h3 class="panel-title">Item</h3>
-              </div>
-              <div class="panel-body">
-                Water Bottle
-              </div>
             </div>
-
-            <div class="panel panel-success">
-              <div class="panel-heading">
-                <h3 class="panel-title">Category</h3>
-              </div>
-              <div class="panel-body">
-                Daily Life
-              </div>
+            <div class="panel-body">
+                {{$item->item}}
             </div>
-
-            <div class="panel panel-info">
-              <div class="panel-heading">
-                <h3 class="panel-title">One Line Description</h3>
-              </div>
-              <div class="panel-body">
-                A Brand New Water Bottle 9 Ounces
-              </div>
-            </div>
-
-            <div class="panel panel-warning">
-              <div class="panel-heading">
-                <h3 class="panel-title">Price</h3>
-              </div>
-              <div class="panel-body">
-                $3.99
-              </div>
-            </div>
-
-            <div class="panel panel-danger">
-              <div class="panel-heading">
-                <h3 class="panel-title">Details</h3>
-              </div>
-              <div class="panel-body">
-                This is a very good bottle.
-              </div>
-            </div>
-            <button type="button" class="btn btn-info" id="buy">Buy</button>
-
-
-
         </div>
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Category</h3>
+            </div>
+            <div class="panel-body">
+                {{$item->category}}
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">One Line Description</h3>
+            </div>
+            <div class="panel-body">
+                {{$item->one_line_description}}
+            </div>
+        </div>
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">Price</h3>
+            </div>
+            <div class="panel-body">
+                ${{$item->price}}
+            </div>
+        </div>
+
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">Details</h3>
+            </div>
+            <div class="panel-body">
+                This is a very good bottle.
+            </div>
+        </div>
+        <button type="button" class="btn btn-info" id="buy">Buy</button>
     </div>
+</div>
 
 @stop
 

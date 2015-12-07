@@ -1,9 +1,8 @@
 
-console.log("hello");
+console.log("hello again");
 
-$('#selectedItem').click(function () {
-
-    console.log('test again');
-    window.location.href = '/details/1';
-
-});
+function itemClicked(button_id)
+{
+    //alert(button_id);
+    window.location.href = '/details/' + button_id;
+}
