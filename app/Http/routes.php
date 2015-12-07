@@ -35,6 +35,24 @@ Route::get('/browseItems', 'BrowseItemsController@getPage');
 Route::get('/details/1', 'DetailsController@getPage');
 
 
+// a route to test that login worked
+Route::get('/confirm-login-worked', function() {
+
+    # You may access the authenticated user via the Auth facade
+    $user = Auth::user();
+
+    if($user) {
+        echo 'You are logged in.';
+        dump($user->toArray());
+    } else {
+        echo 'You are not logged in.';
+    }
+
+    return;
+
+});
+
+
 // a route to test the database connection
 Route::get('/debug', function() {
 

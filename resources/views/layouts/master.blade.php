@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>
-        {{-- Yield the title if it exists, otherwise default to 'Foobooks' --}}
-        @yield('title','Foobooks')
+        {{-- Yield the title if it exists, otherwise default to 'Pongo' --}}
+        @yield('title','Pongo')
     </title>
 
     <meta charset='utf-8'>
@@ -40,7 +40,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="/myspace">MySpace</a></li>
+              <li><a href="/myspace">myspace</a></li>
               <li><a href="/addItem">Add</a></li>
               <li><a href="/browseItems">Browse</a></li>
 
