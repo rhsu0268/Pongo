@@ -15,6 +15,7 @@ class AddedItemsTableSeeder extends Seeder
        DB::table('added_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+       'user_id' => 1,
        'item' => 'Water Bottle',
        'category' => 'Daily Life',
        'one_line_description' => 'A Full 9 oz. Water Bottle Used But Still Like New',
@@ -25,6 +26,7 @@ class AddedItemsTableSeeder extends Seeder
        DB::table('added_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+       'user_id' => 2,
        'item' => 'Laravel 5 Textbook',
        'category' => 'Book',
        'one_line_description' => 'A Laravel 5 Textbook for CSCIE15',
@@ -35,6 +37,7 @@ class AddedItemsTableSeeder extends Seeder
        DB::table('added_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+       'user_id' => 1,
        'item' => 'Red and Green Sweater',
        'category' => 'Clothing',
        'one_line_description' => 'A Nice Red and Green Sweater for the Holiday Season',

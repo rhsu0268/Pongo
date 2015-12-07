@@ -53,13 +53,15 @@ such as a page specific styesheets.
                     <td>Price</td>
                     <td>Options</td>
                 </tr>
-                <tr>
-                    <td>Organic Chemistry Textbook</td>
-                    <td>Book</td>
-                    <td>A Brand New Organic Chemistry Textbook!</td>
-                    <td>$50.99</td>
-                    <td></td>
-                </tr>
+                @foreach($addedItems as $item)
+                    <tr>
+                        <td>{{ $item['item'] }}</td>
+                        <td>{{ $item['category'] }}</td>
+                        <td>{{ $item['one_line_description'] }}</td>
+                        <td>${{ $item['price'] }}</td>
+                        <td><button type="button" class="btn btn-info" id="{{ $item['id'] }}" onClick="itemClicked(this.id)">More Info</button></td>
+                    </tr>
+                @endforeach
             </table>
 
         </div>

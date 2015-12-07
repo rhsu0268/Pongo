@@ -23,7 +23,13 @@ class MySpaceController extends Controller {
     */
     public function getPage() {
 
-        return view('pongo.myspace');
+        // get all the items added by the user
+        $addedItems = \App\AddedItem::where('user_id', '=', \Auth::id())->get();
+        //dump($addedItems);
+
+        $addedItemsArray = $addedItems->toArray();
+
+        return view('pongo.myspace')->with('addedItems', $addedItemsArray);
     }
 
     public function postPage(Request $request)
