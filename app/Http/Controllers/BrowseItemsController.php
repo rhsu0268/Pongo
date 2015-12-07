@@ -23,6 +23,12 @@ class BrowseItemsController extends Controller {
     */
     public function getPage() {
 
+        // fetch the items from the public_items table
+        $items = \App\PublicItem::all();
+
+        //dump($items->toArray());
+
+        
         return view('pongo.browse_items');
     }
 
