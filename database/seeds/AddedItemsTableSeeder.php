@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PublicItemsTableSeeder extends Seeder
+class AddedItemsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class PublicItemsTableSeeder extends Seeder
     public function run()
     {
         //
-       DB::table('public_items')->insert([
+       DB::table('added_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
        'item' => 'Water Bottle',
@@ -22,7 +22,7 @@ class PublicItemsTableSeeder extends Seeder
        'detailed_description' => 'This is a very good water bottle suitable for sports and also just daily outdoor activities.'
        ]);
 
-       DB::table('public_items')->insert([
+       DB::table('added_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
        'item' => 'Laravel 5 Textbook',
@@ -32,7 +32,7 @@ class PublicItemsTableSeeder extends Seeder
        'detailed_description' => 'This Laravel 5 Textbook introduces you to the basics of Laravel and is a good guide for building dynamic web applications.'
        ]);
 
-       DB::table('public_items')->insert([
+       DB::table('added_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
        'item' => 'Red and Green Sweater',

@@ -4,7 +4,7 @@
 
  --}}
 @section('title')
-    MySpace
+    myspace
 @stop
 
 {{--

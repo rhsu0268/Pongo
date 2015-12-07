@@ -29,6 +29,7 @@ class CreatePublicItemsTable extends Migration
         $table->string('category');
         $table->text('one_line_description');
         $table->decimal('price');
+        $table->text('detailed_description');
 
 
         # FYI: We're skipping the 'tags' field for now; more on that later.
