@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/myspace', 'MySpaceController@getPage');
     Route::get('/addItem', 'AddItemController@getPage');
+    Route::post('/addItem', 'AddItemController@postPage');
     Route::get('/browseItems', 'BrowseItemsController@getPage');
     Route::get('/details/{id?}', 'DetailsController@getPage');
     Route::get('/itemDetails/{id?}', 'ItemDetailsController@getPage');

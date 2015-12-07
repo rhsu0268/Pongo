@@ -20,22 +20,26 @@ such as a page specific styesheets.
 @section('content')
  	<div class="container">
         <div class="content">
-            <form>
+            <form method="POST" action='/addItem'>
               <div class="form-group">
                 <label for="Item">Item</label>
-                <input type="text" class="form-control" id="item" placeholder="Item">
+                <input type="text" class="form-control" id="item" placeholder="Item" name="item">
+              </div>
+              <div class="form-group">
+                <label for="category">One Line Description</label>
+                <input type="text" class="form-control" id="oneLineDescription" placeholder="One Line Description" name="oneLineDescription">
               </div>
               <div class="form-group">
                 <label for="category">Category</label>
-                <input type="text" class="form-control" id="category" placeholder="Category">
+                <input type="text" class="form-control" id="category" placeholder="Category" name="category">
               </div>
               <div class="form-group">
                 <label for="category">Price</label>
-                <input type="text" class="form-control" id="category" placeholder="Price">
+                <input type="text" class="form-control" id="category" placeholder="Price" name="price">
               </div>
               <div class="form-group">
                <label for="description">Comment:</label>
-               <textarea class="form-control" rows="5" id="description">Enter description for your item...</textarea>
+               <textarea class="form-control" rows="5" id="description" name="description">Enter description for your item...</textarea>
              </div>
 
               <button type="submit" class="btn btn-default">Add Item</button>
