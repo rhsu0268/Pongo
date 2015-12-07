@@ -30,7 +30,7 @@ class BrowseItemsController extends Controller {
 
         $itemsArray = $items->toArray();
 
-        dump($itemsArray);
+        //dump($itemsArray);
 
         return view('pongo.browse_items')->with('items', $itemsArray);
     }
