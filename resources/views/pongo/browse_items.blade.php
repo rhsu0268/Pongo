@@ -4,7 +4,7 @@
 
  --}}
 @section('title')
-    Browse Items
+    Item Details
 @stop
 
 {{--
