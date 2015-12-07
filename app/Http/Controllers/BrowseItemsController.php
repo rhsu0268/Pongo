@@ -28,8 +28,11 @@ class BrowseItemsController extends Controller {
 
         //dump($items->toArray());
 
-        
-        return view('pongo.browse_items');
+        $itemsArray = $items->toArray();
+
+        dump($itemsArray);
+
+        return view('pongo.browse_items')->with('items', $itemsArray);
     }
 
     public function postPage(Request $request)

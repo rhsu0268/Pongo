@@ -30,13 +30,15 @@ such as a page specific styesheets.
                     <td>Price</td>
                     <td>Options</td>
                 </tr>
-                <tr>
-                    <td>Water Bottle</td>
-                    <td>Daily Life</td>
-                    <td>A Brand New Water Bottle 9 Ounces</td>
-                    <td>$3.99</td>
-                    <td><button type="button" class="btn btn-info" id="selectedItem">More Info</button></td>
-                </tr>
+                @foreach($items as $item)
+                    <tr>
+                        <td>{{ $item['item'] }}</td>
+                        <td>{{ $item['category'] }}</td>
+                        <td>{{ $item['one_line_description'] }}</td>
+                        <td>${{ $item['price'] }}</td>
+                        <td><button type="button" class="btn btn-info" id="{{ $item['id'] }}">More Info</button></td>
+                    </tr>
+                @endforeach
             </table>
 
         </div>
