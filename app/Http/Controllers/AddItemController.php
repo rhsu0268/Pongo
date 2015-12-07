@@ -28,6 +28,20 @@ class AddItemController extends Controller {
 
     public function postPage(Request $request)
     {
+        // code here to enter into the add_item table
+        $item = new \App\AddedItem();
+        $item->item = $request->item;
+        $item->user_id = \Auth::id();
+        $item->category = $request->category;
+        $item->one_line_description =$request->oneLineDescription;
+        $item->price =$request->price;
+        $item->detailed_description =$request->description;
+
+        $item->save();
+
+        \Session::flash('flash_message', 'Your item was added!');
+
+        return redirect('/myspace');
     }
 
 
