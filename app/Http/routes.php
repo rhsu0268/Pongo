@@ -29,10 +29,14 @@ Route::get('/register', 'Auth\AuthController@getRegister');
 # Process registration form
 Route::post('/register', 'Auth\AuthController@postRegister');
 
-Route::get('/myspace', 'MySpaceController@getPage');
-Route::get('/addItem', 'AddItemController@getPage');
-Route::get('/browseItems', 'BrowseItemsController@getPage');
-Route::get('/details/1', 'DetailsController@getPage');
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/myspace', 'MySpaceController@getPage');
+    Route::get('/addItem', 'AddItemController@getPage');
+    Route::get('/browseItems', 'BrowseItemsController@getPage');
+    Route::get('/details/1', 'DetailsController@getPage');
+
+});
 
 
 // a route to test that login worked

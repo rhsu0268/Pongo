@@ -40,15 +40,19 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="/myspace">myspace</a></li>
-                        <li><a href="/addItem">Add</a></li>
-                        <li><a href="/browseItems">Browse</a></li>
 
+                        @if(Auth::check())
+                            <li><a href="/myspace">myspace</a></li>
+                            <li><a href="/addItem">Add</a></li>
+                            <li><a href="/browseItems">Browse</a></li>
+                        @endif
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/register">Create Account</a></li>
-                        <li><a href="/login">Sign In</a></li>
-                        <li><a href='/logout'>Log out</a></li>
+                            <li><a href="/register">Create Account</a></li>
+                            <li><a href="/login">Sign In</a></li>
+                            @if(Auth::check())
+                            <li><a href='/logout'>Log out</a></li>
+                        @endif
 
                     </ul>
                 </div><!--/.nav-collapse -->
