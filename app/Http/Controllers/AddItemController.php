@@ -48,7 +48,6 @@ class AddItemController extends Controller {
         $item->one_line_description =$request->oneLineDescription;
         $item->price =$request->price;
         $item->detailed_description =$request->description;
-
         $item->save();
 
         \Session::flash('flash_message', 'Your item was added!');

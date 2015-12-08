@@ -59,7 +59,17 @@ such as a page specific styesheets.
                         <td>{{ $item['category'] }}</td>
                         <td>{{ $item['one_line_description'] }}</td>
                         <td>${{ $item['price'] }}</td>
-                        <td><button type="button" class="btn btn-info" id="{{ $item['id'] }}" onClick="itemClicked(this.id)">More Info</button></td>
+                        <td>
+                            <button type="button" class="btn btn-info" id="{{ $item['id'] }}" onClick="itemClicked(this.id)">
+                                More Info
+                            </button>
+                            <button type="button" class="btn btn-success" id="{{ $item['id'] }}" onClick="makePublic(this.id)">
+                                Make Public
+                            </button>
+                            <button type="button" class="btn btn-danger" id="{{ $item['id'] }}" onClick="deleteItem(this.id)">
+                                Delete Item
+                            </button>
+                        </td>
                     </tr>
                 @endforeach
             </table>

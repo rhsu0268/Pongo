@@ -21,7 +21,25 @@ class BrowseItemsController extends Controller {
     /**
     * Responds to requests to
     */
-    public function getPage() {
+    public function getPage($id = null) {
+
+        if ($id != null)
+        {
+            $item = \App\AddedItem::where('id', '=', $id)->find($id);
+            $itemAsArray = $item->toArray();
+            //echo $itemAsArray['item'];
+
+            // add the item to the public_items table
+
+            $publicItem = new \App\PublicItem();
+            $publicItem->item = $itemAsArray['item'];
+            $publicItem->category = $itemAsArray['category'];
+            $publicItem->one_line_description = $itemAsArray['one_line_description'];
+            $publicItem->price = $itemAsArray['price'];
+            $publicItem->detailed_description = $itemAsArray['detailed_description'];
+            $publicItem->save();
+
+        }
 
         // fetch the items from the public_items table
         $items = \App\PublicItem::all();
