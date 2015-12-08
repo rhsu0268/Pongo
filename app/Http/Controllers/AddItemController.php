@@ -28,6 +28,18 @@ class AddItemController extends Controller {
 
     public function postPage(Request $request)
     {
+        // validation
+        $this->validate(
+        $request,
+        [
+            'item' => 'required',
+            'category' => 'required',
+            'one_line_description' => 'required|max:50',
+            'price' => 'required',
+            'detailed_description' => 'required|min:20'
+        ]
+    );
+
         // code here to enter into the add_item table
         $item = new \App\AddedItem();
         $item->item = $request->item;

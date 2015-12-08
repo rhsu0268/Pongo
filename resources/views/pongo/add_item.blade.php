@@ -20,6 +20,13 @@ such as a page specific styesheets.
 @section('content')
 <div class="container">
     <div class="content">
+        @if(count($errors) > 0)
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
         <form method="POST" action='/addItem'>
             <input type='hidden' value='{{ csrf_token() }}' name='_token'>
             <div class="form-group">
@@ -39,7 +46,7 @@ such as a page specific styesheets.
                 <input type="text" class="form-control" id="price" placeholder="Price" name="price">
             </div>
             <div class="form-group">
-                <label for="description">Comment:</label>
+                <label for="description">Detailed Description</label>
                 <textarea class="form-control" rows="5" id="description" name="description">Enter description for your item...</textarea>
             </div>
 
