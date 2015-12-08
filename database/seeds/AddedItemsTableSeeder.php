@@ -20,7 +20,8 @@ class AddedItemsTableSeeder extends Seeder
        'category' => 'Daily Life',
        'one_line_description' => 'A Full 9 oz. Water Bottle Used But Still Like New',
        'price' => 3.99,
-       'detailed_description' => 'This is a very good water bottle suitable for sports and also just daily outdoor activities.'
+       'detailed_description' => 'This is a very good water bottle suitable for sports and also just daily outdoor activities.',
+       'make_public' => TRUE
        ]);
 
        DB::table('added_items')->insert([
@@ -31,7 +32,8 @@ class AddedItemsTableSeeder extends Seeder
        'category' => 'Book',
        'one_line_description' => 'A Laravel 5 Textbook for CSCIE15',
        'price' => 10.99,
-       'detailed_description' => 'This Laravel 5 Textbook introduces you to the basics of Laravel and is a good guide for building dynamic web applications.'
+       'detailed_description' => 'This Laravel 5 Textbook introduces you to the basics of Laravel and is a good guide for building dynamic web applications.',
+       'make_public' => FALSE
        ]);
 
        DB::table('added_items')->insert([
@@ -42,7 +44,8 @@ class AddedItemsTableSeeder extends Seeder
        'category' => 'Clothing',
        'one_line_description' => 'A Nice Red and Green Sweater for the Holiday Season',
        'price' => 7.99,
-       'detailed_description' => 'This red and green sweater is perfect for the Christmas season and will leave a happy smile on your face in the weeks to come.'
+       'detailed_description' => 'This red and green sweater is perfect for the Christmas season and will leave a happy smile on your face in the weeks to come.',
+       'make_public' => FALSE
        ]);
     }
 }

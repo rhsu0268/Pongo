@@ -36,7 +36,7 @@ class ConnectAddedItemsAndUsers extends Migration
         Schema::table('added_items', function (Blueprint $table) {
 
             # ref: http://laravel.com/docs/5.1/migrations#dropping-indexes
-            $table->dropForeign('added_item_user_id_foreign');
+            $table->dropForeign('added_items_user_id_foreign');
 
             $table->dropColumn('user_id');
         });

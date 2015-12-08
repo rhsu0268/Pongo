@@ -30,7 +30,7 @@ class CreateAddedItemsTable extends Migration
             $table->text('one_line_description');
             $table->decimal('price');
             $table->text('detailed_description');
-
+            $table->boolean('make_public');
             # FYI: We're skipping the 'tags' field for now; more on that later.
 
         });
