@@ -63,9 +63,11 @@ such as a page specific styesheets.
                             <button type="button" class="btn btn-info" id="{{ $item['id'] }}" onClick="itemClicked(this.id)">
                                 More Info
                             </button>
+                            @if ( !$item['make_public'] )
                             <button type="button" class="btn btn-success" id="{{ $item['id'] }}" onClick="makePublic(this.id)">
                                 Make Public
                             </button>
+                            @endif
                             <button type="button" class="btn btn-danger" id="{{ $item['id'] }}" onClick="deleteItem(this.id)">
                                 Delete Item
                             </button>

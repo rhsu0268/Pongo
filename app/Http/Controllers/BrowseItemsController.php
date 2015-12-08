@@ -25,9 +25,18 @@ class BrowseItemsController extends Controller {
 
         if ($id != null)
         {
+
+            // find the item in the added_items table
             $item = \App\AddedItem::where('id', '=', $id)->find($id);
             $itemAsArray = $item->toArray();
-            //echo $itemAsArray['item'];
+            // update the added_items table
+            if ($itemAsArray)
+            {
+                $item->make_public = TRUE;
+
+                // save changes
+                $item->save();
+            }
 
             // add the item to the public_items table
 
