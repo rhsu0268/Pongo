@@ -30,15 +30,15 @@ class AddItemController extends Controller {
     {
         // validation
         $this->validate(
-        $request,
-        [
-            'item' => 'required',
-            'category' => 'required',
-            'one_line_description' => 'required|max:50',
-            'price' => 'required',
-            'detailed_description' => 'required|min:20'
-        ]
-    );
+            $request,
+            [
+                'item' => 'required',
+                'category' => 'required',
+                'oneLineDescription' => 'required|max:50',
+                'price' => 'required',
+                'description' => 'required|min:20'
+            ]
+        );
 
         // code here to enter into the add_item table
         $item = new \App\AddedItem();
