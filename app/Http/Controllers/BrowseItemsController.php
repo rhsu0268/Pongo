@@ -39,13 +39,13 @@ class BrowseItemsController extends Controller {
             }
 
             // add the item to the public_items table
-
             $publicItem = new \App\PublicItem();
             $publicItem->item = $itemAsArray['item'];
             $publicItem->category = $itemAsArray['category'];
             $publicItem->one_line_description = $itemAsArray['one_line_description'];
             $publicItem->price = $itemAsArray['price'];
             $publicItem->detailed_description = $itemAsArray['detailed_description'];
+            $publicItem->user_id = \Auth::id();
             $publicItem->save();
 
         }
