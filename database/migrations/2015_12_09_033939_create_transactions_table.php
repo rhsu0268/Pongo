@@ -48,15 +48,6 @@ class CreateTransactionsTable extends Migration
      */
     public function down()
     {
-        // drop the user_id foreign key
-        $table->dropForeign('transactions_user_id_foreign');
-        $table->dropColumn('user_id');
-
-        // drop the item_id foreign key
-        $table->dropForeign('transactions_item_id_foreign');
-        $table->dropColumn('item_id');
-
-        // drop the public_items table
         Schema::drop('transactions');
     }
 }
