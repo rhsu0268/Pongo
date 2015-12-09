@@ -42,4 +42,9 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany('\App\AddedItem');
     }
+
+    public function transaction()
+    {
+        return $this->hasMany('\App\Transaction');
+    }
 }
