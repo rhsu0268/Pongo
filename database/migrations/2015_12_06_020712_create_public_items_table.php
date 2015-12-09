@@ -32,8 +32,6 @@ class CreatePublicItemsTable extends Migration
         $table->text('detailed_description');
 
 
-        # FYI: We're skipping the 'tags' field for now; more on that later.
-
         });
     }
 
