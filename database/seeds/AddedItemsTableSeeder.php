@@ -21,7 +21,7 @@ class AddedItemsTableSeeder extends Seeder
        'one_line_description' => 'A Full 9 oz. Water Bottle Used But Still Like New',
        'price' => 3.99,
        'detailed_description' => 'This is a very good water bottle suitable for sports and also just daily outdoor activities.',
-       'make_public' => TRUE
+       'make_public' => FALSE
        ]);
 
        DB::table('added_items')->insert([

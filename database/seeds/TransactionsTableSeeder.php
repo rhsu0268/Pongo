@@ -13,7 +13,7 @@ class TransactionsTableSeeder extends Seeder
     {
         //
 
-        $public_item_id = \App\PublicItem::where('item', '=', 'Water Bottle')->pluck('id');
+        $public_item_id = \App\PublicItem::where('item', '=', 'Organic Chemistry Textbook')->pluck('id');
         DB::table('transactions')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -22,7 +22,7 @@ class TransactionsTableSeeder extends Seeder
         'user_id' => 1
         ]);
 
-        $public_item_id = \App\PublicItem::where('item', '=', 'Laravel 5 Textbook')->pluck('id');
+        $public_item_id = \App\PublicItem::where('item', '=', 'GWU Hoodie')->pluck('id');
         DB::table('transactions')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -31,7 +31,7 @@ class TransactionsTableSeeder extends Seeder
         'user_id' => 1
         ]);
 
-        $public_item_id = \App\PublicItem::where('item', '=', 'Red and Green Sweater')->pluck('id');
+        $public_item_id = \App\PublicItem::where('item', '=', 'Headphones')->pluck('id');
         DB::table('transactions')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
