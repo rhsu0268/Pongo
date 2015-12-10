@@ -37,6 +37,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/browseItems/{id?}', 'BrowseItemsController@getPage');
     Route::get('/details/{id?}', 'DetailsController@getPage');
     Route::get('/itemDetails/{id?}', 'ItemDetailsController@getPage');
+    Route::get('/transactionDetails/{id?}', 'TransactionDetailsController@getPage');
 });
 
 

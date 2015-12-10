@@ -13,3 +13,10 @@ function makePublic(button_id)
     window.location.href = '/browseItems/' + button_id;
 
 }
+
+function transactionClicked(button_id)
+{
+    console.log("<<<<<>>>>hello");
+    window.location.href = '/transactionDetails/' + button_id;
+
+}
