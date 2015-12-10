@@ -30,34 +30,28 @@ class MySpaceController extends Controller {
         $addedItemsArray = $addedItems->toArray();
 
         // get all the transactions of the user
-        //$transactions = \App\Transaction::with('public_item')->get();
-        //$transactions = \App\Transaction::where('user_id', '=', \Auth::id())->get();
-        //dump($transactions);
-        $item = \App\Transaction::first();
-        //dump($item);
-        $test = $item->public_item;
-        dump($test);
 
-
-
-        //$transactions = \App\Transaction::where('user_id', '=', \Auth::id())->get();
+        $transactions = \App\Transaction::where('user_id', '=', \Auth::id())->get();
         //dump($transactions);
 
-        /*
-        foreach($transactions as $transaction)
-        {
-            $item = $transaction->public_item;
-            dump($item);
-        }
-        */
-        /*
+        $transactionArrays = array();
+
+
         foreach ($transactions as $transaction)
         {
-            //dump($transaction->toArray());
-            //echo $transaction->
+            $transactionArray = $transaction->public_item->toArray();
+            //dump($transactionArray);
+            $transactionArray["transaction_type"] = $transaction->transaction_type;
+            $transactionArray["transaction_date"] = $transaction->created_at;
+
+
+            array_push($transactionArrays, $transactionArray);
         }
-        */
-        return view('pongo.myspace')->with('addedItems', $addedItemsArray);
+
+        //dump($transactionArrays);
+        return view('pongo.myspace')->with([
+            'addedItems' => $addedItemsArray,
+            'transactions' => $transactionArrays]);
     }
 
     public function postPage(Request $request)

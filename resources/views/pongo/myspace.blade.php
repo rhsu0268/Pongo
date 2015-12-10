@@ -58,19 +58,23 @@ such as a page specific styesheets.
                 <td>Transaction Type</td>
                 <td>Item</td>
                 <td>Category</td>
-                <td>One Line Description</td>
                 <td>Price</td>
                 <td>Options</td>
             </tr>
+            @foreach($transactions as $transaction)
             <tr>
-                <td>12-3-15</td>
-                <td>SELL</td>
-                <td>Water Bottle</td>
-                <td>Daily Life</td>
-                <td>A Brand New Water Bottle 9 Ounces</td>
-                <td>$3.99</td>
-                <td></td>
+                <td>{{$transaction['transaction_date']}}</td>
+                <td>{{$transaction['transaction_type']}}</td>
+                <td>{{$transaction['item']}}</td>
+                <td>{{$transaction['category']}}</td>
+                <td>{{$transaction['price']}}</td>
+                <td>
+                    <button type="button" class="btn btn-info" id="{{ $transaction['id'] }}" onClick="itemClicked(this.id)">
+                        More Info
+                    </button>
+                </td>
             </tr>
+            @endforeach
         </table>
     </div>
 </div>
