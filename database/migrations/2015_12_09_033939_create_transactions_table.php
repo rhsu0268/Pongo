@@ -26,17 +26,6 @@ class CreateTransactionsTable extends Migration
         # The rest of the fields...
         $table->string('transaction_type');
 
-        # Add a new INT field called `user_id` that has to be unsigned (i.e. positive)
-        $table->integer('user_id')->unsigned();
-
-        # This field `user_id` is a foreign key that connects to the `id` field in the `users` table
-        $table->foreign('user_id')->references('id')->on('users');
-
-        # Add a new INT field called `item_id` that has to be unsigned (i.e. positive)
-        $table->integer('item_id')->unsigned();
-
-        # This field `user_id` is a foreign key that connects to the `id` field in the `public_items` table
-        $table->foreign('item_id')->references('id')->on('public_items');
 
         });
     }

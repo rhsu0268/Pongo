@@ -29,6 +29,34 @@ class MySpaceController extends Controller {
 
         $addedItemsArray = $addedItems->toArray();
 
+        // get all the transactions of the user
+        //$transactions = \App\Transaction::with('public_item')->get();
+        //$transactions = \App\Transaction::where('user_id', '=', \Auth::id())->get();
+        //dump($transactions);
+        $item = \App\Transaction::first();
+        //dump($item);
+        $test = $item->public_item;
+        dump($test);
+
+
+
+        //$transactions = \App\Transaction::where('user_id', '=', \Auth::id())->get();
+        //dump($transactions);
+
+        /*
+        foreach($transactions as $transaction)
+        {
+            $item = $transaction->public_item;
+            dump($item);
+        }
+        */
+        /*
+        foreach ($transactions as $transaction)
+        {
+            //dump($transaction->toArray());
+            //echo $transaction->
+        }
+        */
         return view('pongo.myspace')->with('addedItems', $addedItemsArray);
     }
 

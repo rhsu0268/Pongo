@@ -11,4 +11,9 @@ class Transaction extends Model
         return $this->belongsTo('\App\User');
     }
 
+    public function public_item()
+    {
+        return $this->belongsTo('\App\PublicItem');
+    }
+
 }
