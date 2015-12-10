@@ -20,6 +20,7 @@ such as a page specific styesheets.
 @section('content')
 <div class="container">
     <div class="content">
+        <button type="button" class="btn btn-warning" id="back" style="float: right;">Back</button>
         <h1>Item Description</h1>
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -62,7 +63,7 @@ such as a page specific styesheets.
                 <h3 class="panel-title">Details</h3>
             </div>
             <div class="panel-body">
-                {{$item->detailed_description}}    
+                {{$item->detailed_description}}
             </div>
         </div>
 
@@ -77,5 +78,5 @@ Use it to add specific things that *this* View needs at the end of the body,
 such as a page specific JavaScript files.
 --}}
 @section('body')
-    <script src="/js/browse.js"></script>
+    <script src="/js/item_details.js"></script>
 @stop
