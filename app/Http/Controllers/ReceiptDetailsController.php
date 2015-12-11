@@ -66,6 +66,9 @@ class ReceiptDetailsController extends Controller {
         $itemObject = (object)$itemAsArray;
         //dump($itemObject);
 
+        
+
+
         \Session::flash('flash_message', 'You successfully purchased the item!');
 
         return view('pongo.receipt_details')->with('item', $itemObject);

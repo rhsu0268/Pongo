@@ -96,3 +96,11 @@ Route::get('/debug', function() {
     echo '</pre>';
 
 });
+
+Route::get('/mail', function() {
+    echo "Testing";
+    Mail::raw('Laravel with Mailgun is easy!', function($message)
+    {
+        $message->to('pongoapp@gmail.com');
+    });
+});
