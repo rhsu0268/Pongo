@@ -44,14 +44,22 @@ class ReceiptDetailsController extends Controller {
             return view('pongo.browse_items')->with('items', $itemsArray);
         }
 
+        // update the item as bought
         $item->bought = TRUE;
         $item->save();
 
-        // add the transaction to the transactions table
+        // update the transaction table for the user who buys the product
         $transaction = new \App\Transaction();
         $transaction->transaction_type = "BUY";
         $transaction->public_item_id = $id;
         $transaction->user_id = \Auth::id();
+        $transaction->save();
+
+        // update the transaction table for user who sold the product
+        $transaction = new \App\Transaction();
+        $transaction->transaction_type = "SELL";
+        $transaction->public_item_id = $id;
+        $transaction->user_id = $user_id;
         $transaction->save();
 
         $itemAsArray = $item->toArray();
