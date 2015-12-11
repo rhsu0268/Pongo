@@ -37,14 +37,13 @@ class ReceiptDetailsController extends Controller {
         $transaction->user_id = \Auth::id();
         $transaction->save();
 
-        \Session::flash('flash_message', 'You successfully purchased an item!');
-
-
-
-
+        $itemAsArray = $item->toArray();
+        $itemObject = (object)$itemAsArray;
         //dump($itemObject);
 
-        return view('pongo.receipt_details');
+        \Session::flash('flash_message', 'You successfully purchased an item!');
+
+        return view('pongo.receipt_details')->with('item', $itemObject);
     }
 
     public function postPage(Request $request)

@@ -30,22 +30,20 @@ such as a page specific styesheets.
                 <td>Price</td>
             </tr>
             <tr>
-                <td>Binder</td>
-                <td>School Supplies</td>
-                <td>A 1 inch binder for school use!</td>
-                <td>2.99</td>
+                <td>{{$item->item}}</td>
+                <td>{{$item->category}}</td>
+                <td>{{$item->one_line_description}}</td>
+                <td>${{$item->price}}</td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
-                <td>Tax</td>
-                <td>{{(2.99 * 0.08875)}}</td>
+
             </tr>
             <tr>
                 <td></td>
                 <td></td>
-                <td>Total</td>
-                <td>{{(2.99 * 0.08875 + 2.99)}}</td>
+            
             </tr>
         </table>
 
