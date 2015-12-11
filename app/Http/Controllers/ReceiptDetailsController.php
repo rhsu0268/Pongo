@@ -23,12 +23,22 @@ class ReceiptDetailsController extends Controller {
     */
     public function getPage($id = null) {
 
-        // add the transaction to the transactions table
-
+        // update the public_items table and mark the item as bought
         $item = \App\PublicItem::where('id', '=', $id)->find($id);
-        dump($item);
+        //dump($item->toArray());
+        //dump($item['item']);
+        $item->bought = TRUE;
+        $item->save();
+
+        // add the transaction to the transactions table
         $transaction = new \App\Transaction();
-    
+        $transaction->transaction_type = "BUY";
+        $transaction->public_item_id = $id;
+        $transaction->user_id = \Auth::id();
+        $transaction->save();
+
+        \Session::flash('flash_message', 'You successfully purchased an item!');
+
 
 
 

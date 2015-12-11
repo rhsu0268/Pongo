@@ -51,7 +51,7 @@ class BrowseItemsController extends Controller {
         }
 
         // fetch the items from the public_items table
-        $items = \App\PublicItem::all();
+        $items = \App\PublicItem::where('bought', '=', 0)->get();
 
         //dump($items->toArray());
 
