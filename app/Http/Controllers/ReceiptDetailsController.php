@@ -26,7 +26,24 @@ class ReceiptDetailsController extends Controller {
         // update the public_items table and mark the item as bought
         $item = \App\PublicItem::where('id', '=', $id)->find($id);
         //dump($item->toArray());
-        //dump($item['item']);
+
+        // make sure the item isn't one that is posted by the user
+        $user_id = $item['user_id'];
+
+        if ($user_id == \Auth::id())
+        {
+            \Session::flash('flash_message', 'You cannot purchase an item that you posted!');
+
+            // fetch the items from the public_items table
+            $items = \App\PublicItem::where('bought', '=', 0)->get();
+
+            //dump($items->toArray());
+
+            $itemsArray = $items->toArray();
+
+            return view('pongo.browse_items')->with('items', $itemsArray);
+        }
+
         $item->bought = TRUE;
         $item->save();
 
@@ -41,7 +58,7 @@ class ReceiptDetailsController extends Controller {
         $itemObject = (object)$itemAsArray;
         //dump($itemObject);
 
-        \Session::flash('flash_message', 'You successfully purchased an item!');
+        \Session::flash('flash_message', 'You successfully purchased the item!');
 
         return view('pongo.receipt_details')->with('item', $itemObject);
     }
