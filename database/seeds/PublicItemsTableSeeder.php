@@ -20,7 +20,8 @@ class PublicItemsTableSeeder extends Seeder
        'category' => 'Book',
        'one_line_description' => 'A Well-Written Organic Chemistry Textbook For an A+ Student!',
        'price' => 23.99,
-       'detailed_description' => 'This is a very good textbook for organic chemistry.'
+       'detailed_description' => 'This is a very good textbook for organic chemistry.',
+       'bought' => TRUE
        ]);
 
        DB::table('public_items')->insert([
@@ -31,7 +32,8 @@ class PublicItemsTableSeeder extends Seeder
        'category' => 'Clothing',
        'one_line_description' => 'A Warm Hoodie to Keep You Warm From the Cold!',
        'price' => 11.99,
-       'detailed_description' => 'This is a warm hoodie that will shield you from the brutal winters in Boston!'
+       'detailed_description' => 'This is a warm hoodie that will shield you from the brutal winters in Boston!',
+       'bought' => TRUE
        ]);
 
        DB::table('public_items')->insert([
@@ -42,7 +44,8 @@ class PublicItemsTableSeeder extends Seeder
        'category' => 'Technology',
        'one_line_description' => 'A Pair of Nice i-phone Headphones For Good Enjoyment!',
        'price' => 3.99,
-       'detailed_description' => 'Have you lose your headphones? Have no fear, this set of headphones is cheap and durable.'
+       'detailed_description' => 'Have you lose your headphones? Have no fear, this set of headphones is cheap and durable.',
+       'bought' => TRUE
        ]);
     }
 }

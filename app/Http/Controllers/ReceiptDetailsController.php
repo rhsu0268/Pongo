@@ -23,7 +23,13 @@ class ReceiptDetailsController extends Controller {
     */
     public function getPage($id = null) {
 
-        //echo $id;
+        // add the transaction to the transactions table
+
+        $item = \App\PublicItem::where('id', '=', $id)->find($id);
+        dump($item);
+        $transaction = new \App\Transaction();
+    
+
 
 
         //dump($itemObject);

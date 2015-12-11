@@ -22,51 +22,33 @@ such as a page specific styesheets.
     <button type="button" class="btn btn-warning" id="back" style="float: right;">Back</button>
     <div class="content">
         <h1>Sales Receipt</h1>
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">Item</h3>
-            </div>
-            <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <td>Item</td>
+                <td>Category</td>
+                <td>One Line Description</td>
+                <td>Price</td>
+            </tr>
+            <tr>
+                <td>Binder</td>
+                <td>School Supplies</td>
+                <td>A 1 inch binder for school use!</td>
+                <td>2.99</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Tax</td>
+                <td>{{(2.99 * 0.08875)}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td>{{(2.99 * 0.08875 + 2.99)}}</td>
+            </tr>
+        </table>
 
-            </div>
-        </div>
-
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title">Category</h3>
-            </div>
-            <div class="panel-body">
-
-            </div>
-        </div>
-
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title">One Line Description</h3>
-            </div>
-            <div class="panel-body">
-
-            </div>
-        </div>
-
-        <div class="panel panel-warning">
-            <div class="panel-heading">
-                <h3 class="panel-title">Price</h3>
-            </div>
-            <div class="panel-body">
-
-            </div>
-        </div>
-
-        <div class="panel panel-danger">
-            <div class="panel-heading">
-                <h3 class="panel-title">Details</h3>
-            </div>
-            <div class="panel-body">
-
-            </div>
-        </div>
-        
         <br><br>
     </div>
 </div>

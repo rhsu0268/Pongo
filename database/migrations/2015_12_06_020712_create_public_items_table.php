@@ -30,6 +30,7 @@ class CreatePublicItemsTable extends Migration
         $table->text('one_line_description');
         $table->decimal('price');
         $table->text('detailed_description');
+        $table->boolean('bought');
 
 
         });
