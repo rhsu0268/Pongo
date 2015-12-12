@@ -25,6 +25,8 @@ class CreateTransactionsTable extends Migration
 
         # The rest of the fields...
         $table->string('transaction_type');
+        $table->decimal('tax');
+        $table->decimal('total');
 
 
         });

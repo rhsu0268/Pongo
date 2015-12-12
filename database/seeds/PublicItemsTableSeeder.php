@@ -51,7 +51,7 @@ class PublicItemsTableSeeder extends Seeder
        DB::table('public_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-       'user_id' => 1,
+       'user_id' => 4,
        'item' => 'North Face Jacket',
        'category' => 'Clothing',
        'one_line_description' => 'A Very Warm North Face Jacket for Winter!',

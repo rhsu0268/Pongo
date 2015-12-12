@@ -19,7 +19,9 @@ class TransactionsTableSeeder extends Seeder
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
         'transaction_type' => 'BUY',
         'public_item_id' => $public_item_id,
-        'user_id' => 1
+        'user_id' => 1,
+        'tax' => 2.40,
+        'total' => 26.39
         ]);
 
         $public_item_id = \App\PublicItem::where('item', '=', 'GWU Hoodie')->pluck('id');
@@ -28,7 +30,9 @@ class TransactionsTableSeeder extends Seeder
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
         'transaction_type' => 'BUY',
         'public_item_id' => $public_item_id,
-        'user_id' => 1
+        'user_id' => 1,
+        'tax' => 1.20,
+        'total' => 13.19
         ]);
 
         $public_item_id = \App\PublicItem::where('item', '=', 'Headphones')->pluck('id');
@@ -37,7 +41,9 @@ class TransactionsTableSeeder extends Seeder
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
         'transaction_type' => 'BUY',
         'public_item_id' => $public_item_id,
-        'user_id' => 2
+        'user_id' => 2,
+        'tax' => 0.40,
+        'total' => 4.39
         ]);
     }
 }
