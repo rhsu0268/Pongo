@@ -39,6 +39,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/itemDetails/{id?}', 'ItemDetailsController@getPage');
     Route::get('/transactionDetails/{id?}', 'TransactionDetailsController@getPage');
     Route::get('/receipt/{id?}', 'ReceiptDetailsController@getPage');
+    Route::get('/deleteItem/{id?}', 'DeleteItemController@getPage');
+
 
 });
 

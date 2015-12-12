@@ -20,3 +20,9 @@ function transactionClicked(button_id)
     window.location.href = '/transactionDetails/' + button_id;
 
 }
+
+function deleteItem(button_id)
+{
+    console.log("delete");
+    window.location.href = '/deleteItem/' + button_id;
+}
