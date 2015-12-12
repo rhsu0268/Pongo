@@ -1,27 +1,24 @@
-## Laravel PHP Framework
+# Developer's Best Friend
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Live URL
+<http://p4.rhsu.me>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Description
+As semester comes to a close, students are often rushing to clean out their dorms before heading home. Textbooks,
+leftover school supplies, and other bells and whistles are often tossed aside without much thought. This is a
+Laravel application that will allow users to post the items that they wish to sell, buy other items posted by other
+users, view a history of transactions, and get real-time emails of their purchases in the form of a sales receipt.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Demo
+Coming Soon!
 
-## Official Documentation
+## Details for teaching team
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+1. The 101 Dalmations cartoon/movie is one of my all time favorites and it served as an inspiration for the name of
+the site.
+2. The site requires user login credentials and the 2 required default ones are set up in the migrations:
+    - Name: Jill - Username: jill@harvard.edu - Password: helloworld
+    - Name: Jamal - Username: jamal@harvard.edu - Password: helloworld
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## Outside code
+* Bootstrap: http://getbootstrap.com/
