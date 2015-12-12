@@ -60,10 +60,10 @@ such as a page specific styesheets.
 
         <div class="panel panel-danger">
             <div class="panel-heading">
-                <h3 class="panel-title">Details</h3>
+                <h3 class="panel-title">Detailed Description</h3>
             </div>
             <div class="panel-body">
-                This is a very good bottle.
+                {{$item->detailed_description}}
             </div>
         </div>
         <button type="button" class="btn btn-info" id="{{ $item->id }}" onClick="buyClicked(this.id)">Buy</button>

@@ -31,6 +31,8 @@ class TransactionDetailsController extends Controller {
         //dump($transactionArray);
         $transactionArray["transaction_type"] = $transaction->transaction_type;
         $transactionArray["transaction_date"] = $transaction->created_at;
+        $transactionArray["tax"] = $transaction->tax;
+        $transactionArray["total"] = $transaction->total;
         //dump($transactionArray);
 
         $transactionObject = (object)$transactionArray;

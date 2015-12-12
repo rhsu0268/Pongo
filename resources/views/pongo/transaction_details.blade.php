@@ -60,10 +60,28 @@ such as a page specific styesheets.
 
         <div class="panel panel-danger">
             <div class="panel-heading">
-                <h3 class="panel-title">Details</h3>
+                <h3 class="panel-title">Detailed Description</h3>
             </div>
             <div class="panel-body">
                 {{$transaction->detailed_description}}
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Tax</h3>
+            </div>
+            <div class="panel-body">
+                ${{$transaction->tax}}
+            </div>
+        </div>
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Total</h3>
+            </div>
+            <div class="panel-body">
+                ${{$transaction->total}}
             </div>
         </div>
 

@@ -66,7 +66,7 @@ class ReceiptDetailsController extends Controller {
         $transactionBuy->total= $total;
         $transactionBuy->save();
 
-        dump($transactionBuy->toArray());
+        //dump($transactionBuy->toArray());
         $transactionBuyObject = (object)$transactionBuy->toArray();
 
         $itemAsArray = $item->toArray();
@@ -87,10 +87,6 @@ class ReceiptDetailsController extends Controller {
         $transactionSell->tax = $tax;
         $transactionSell->total= $total;
         $transactionSell->save();
-
-
-
-
 
         \Session::flash('flash_message', 'You successfully purchased the item!');
 

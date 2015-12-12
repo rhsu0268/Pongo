@@ -60,7 +60,7 @@ such as a page specific styesheets.
 
         <div class="panel panel-danger">
             <div class="panel-heading">
-                <h3 class="panel-title">Details</h3>
+                <h3 class="panel-title">Detailed Description</h3>
             </div>
             <div class="panel-body">
                 {{$item->detailed_description}}
