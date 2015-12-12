@@ -66,6 +66,10 @@
         </section>
         <!-- Main component for a primary marketing message or call to action -->
 
+        <footer>
+            &copy; {{ date('Y') }} &nbsp;&nbsp;
+            <a href='https://github.com/rhsu0268/Pongo' class='fa fa-github' target='_blank'> View on Github</a> &nbsp;&nbsp;
+        </footer>
 
     </div> <!-- /container -->
 

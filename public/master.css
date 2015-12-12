@@ -43,3 +43,14 @@ body {
     font-weight:bold;
     color: green;
 }
+
+footer {
+    position: absolute;
+    left:0;
+    bottom:0;
+    height:30px;
+    width:100%;
+    background-color:#ccc;
+    text-align:center;
+    padding:5px;
+}

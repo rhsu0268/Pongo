@@ -35,7 +35,14 @@ such as a page specific styesheets.
             </div>
             <div class="form-group">
                 <label for="category">Category</label>
-                <input type="text" class="form-control" id="category" placeholder="Category" name="category">
+                <select class="form-control" name='category' id='category'>
+                    <option value =''></option>
+                    <option value='Book'>Book</option>
+                    <option value='Clothing'>Clothing</option>
+                    <option value='Daily Life'>Daily Life</option>
+                    <option value='School Supplies'>School Supplies</option>
+                    <option value='Technology'>Technology</option>
+               </select>
             </div>
             <div class="form-group">
                 <label for="category">One Line Description</label>
@@ -47,7 +54,7 @@ such as a page specific styesheets.
             </div>
             <div class="form-group">
                 <label for="description">Detailed Description</label>
-                <textarea class="form-control" rows="5" id="description" name="description">Enter description for your item...</textarea>
+                <textarea class="form-control" rows="5" id="description" name="description"></textarea>
             </div>
 
             <button type="submit" class="btn btn-default">Add Item</button>
