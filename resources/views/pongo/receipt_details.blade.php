@@ -38,12 +38,14 @@ such as a page specific styesheets.
             <tr>
                 <td></td>
                 <td></td>
-
+                <td>Tax</td>
+                <td>${{$transactionBuy->tax}}</td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
-            
+                <td>Total</td>
+                <td>${{$transactionBuy->total}}</td>
             </tr>
         </table>
 

@@ -25,7 +25,7 @@ class ReceiptDetailsController extends Controller {
 
         // update the public_items table and mark the item as bought
         $item = \App\PublicItem::where('id', '=', $id)->find($id);
-        dump($item->toArray());
+        //dump($item->toArray());
 
         $price = null;
         // make sure the item isn't one that is posted by the user
@@ -58,33 +58,36 @@ class ReceiptDetailsController extends Controller {
         $item->save();
 
         // update the transaction table for the user who buys the product
-        $transaction = new \App\Transaction();
-        $transaction->transaction_type = "BUY";
-        $transaction->public_item_id = $id;
-        $transaction->user_id = \Auth::id();
-        $transaction->tax = $tax;
-        $transaction->total= $total;
-        $transaction->save();
+        $transactionBuy = new \App\Transaction();
+        $transactionBuy->transaction_type = "BUY";
+        $transactionBuy->public_item_id = $id;
+        $transactionBuy->user_id = \Auth::id();
+        $transactionBuy->tax = $tax;
+        $transactionBuy->total= $total;
+        $transactionBuy->save();
+
+        dump($transactionBuy->toArray());
+        $transactionBuyObject = (object)$transactionBuy->toArray();
 
         $itemAsArray = $item->toArray();
         $itemObject = (object)$itemAsArray;
 
         // send an email to the user who made the purchase
-        \Mail::send(['html' => 'pongo.sales_receipt_email'], array('item' => $itemObject), function($message)
+        \Mail::send(['html' => 'pongo.sales_receipt_email'], array('item' => $itemObject, 'transactionBuy' => $transactionBuyObject), function($message)
         {
             $message->to(\Auth::user()->email, \Auth::user()->name)->subject('You made a puchase on Pongo!');
         });
 
 
         // update the transaction table for user who sold the product
-        $transaction = new \App\Transaction();
-        $transaction->transaction_type = "SELL";
-        $transaction->public_item_id = $id;
-        $transaction->user_id = $user_id;
-        $transaction->save();
+        $transactionSell = new \App\Transaction();
+        $transactionSell->transaction_type = "SELL";
+        $transactionSell->public_item_id = $id;
+        $transactionSell->user_id = $user_id;
+        $transactionSell->tax = $tax;
+        $transactionSell->total= $total;
+        $transactionSell->save();
 
-
-        //dump($itemObject);
 
 
 
@@ -93,7 +96,7 @@ class ReceiptDetailsController extends Controller {
 
         return view('pongo.receipt_details')->with(
             ['item' => $itemObject,
-             'transaction' => $transaction
+             'transactionBuy' => $transactionBuyObject
             ]);
     }
 

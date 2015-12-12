@@ -24,5 +24,17 @@
             <td>{{$item->one_line_description}}</td>
             <td>${{$item->price}}</td>
         </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Tax</td>
+            <td>${{$transactionBuy->tax}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+            <td>${{$transactionBuy->total}}</td>
+        </tr>
     </table>
 </html>
