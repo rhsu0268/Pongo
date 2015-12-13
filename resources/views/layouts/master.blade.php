@@ -43,8 +43,8 @@
 
                         @if(Auth::check())
                             <li><a href="/myspace">myspace</a></li>
-                            <li><a href="/addItem">Add</a></li>
-                            <li><a href="/browseItems">Browse</a></li>
+                            <li><a href="/addItem">Add Item</a></li>
+                            <li><a href="/browseItems">Browse Items</a></li>
                         @endif
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -66,8 +66,9 @@
         </section>
         <!-- Main component for a primary marketing message or call to action -->
 
+        <br><br><br><br>
         <footer>
-            &copy; {{ date('Y') }} &nbsp;&nbsp;
+            Richard Hsu &copy; {{ date('Y') }} &nbsp;&nbsp;
             <a href='https://github.com/rhsu0268/Pongo' class='fa fa-github' target='_blank'> View on Github</a> &nbsp;&nbsp;
         </footer>
 

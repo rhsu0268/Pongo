@@ -20,46 +20,53 @@ such as a page specific styesheets.
 @section('content')
 <div class="container">
     <div class="content">
-        @if(count($errors) > 0)
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        @endif
-        <form method="POST" action='/addItem'>
-            <input type='hidden' value='{{ csrf_token() }}' name='_token'>
-            <div class="form-group">
-                <label for="Item">Item</label>
-                <input type="text" class="form-control" id="item" placeholder="Item" name="item">
-            </div>
-            <div class="form-group">
-                <label for="category">Category</label>
-                <select class="form-control" name='category' id='category'>
-                    <option value =''></option>
-                    <option value='Book'>Book</option>
-                    <option value='Clothing'>Clothing</option>
-                    <option value='Daily Life'>Daily Life</option>
-                    <option value='School Supplies'>School Supplies</option>
-                    <option value='Technology'>Technology</option>
-               </select>
-            </div>
-            <div class="form-group">
-                <label for="category">One Line Description</label>
-                <input type="text" class="form-control" id="oneLineDescription" placeholder="One Line Description" name="oneLineDescription">
-            </div>
-            <div class="form-group">
-                <label for="category">Price</label>
-                <input type="text" class="form-control" id="price" placeholder="Price" name="price">
-            </div>
-            <div class="form-group">
-                <label for="description">Detailed Description</label>
-                <textarea class="form-control" rows="5" id="description" name="description"></textarea>
-            </div>
+        <div class="row">
 
-            <button type="submit" class="btn btn-default">Add Item</button>
-        </form>
+            <div class="col-md-5">
+                @if(count($errors) > 0)
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                @endif
+                <form method="POST" action='/addItem'>
+                    <input type='hidden' value='{{ csrf_token() }}' name='_token'>
+                    <div class="form-group">
+                        <label for="Item">Item</label>
+                        <input type="text" class="form-control" id="item" placeholder="Item" name="item">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select class="form-control" name='category' id='category'>
+                            <option value =''></option>
+                            <option value='Book'>Book</option>
+                            <option value='Clothing'>Clothing</option>
+                            <option value='Daily Life'>Daily Life</option>
+                            <option value='School Supplies'>School Supplies</option>
+                            <option value='Technology'>Technology</option>
+                       </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">One Line Description</label>
+                        <input type="text" class="form-control" id="oneLineDescription" placeholder="One Line Description" name="oneLineDescription">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Price</label>
+                        <input type="text" class="form-control" id="price" placeholder="Price" name="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Detailed Description</label>
+                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="Enter a detailed description"></textarea>
+                    </div>
 
+                    <button type="submit" class="btn btn-default">Add Item</button>
+                </form>
+            </div>
+            <div class="col-md-7">
+                <img src="/pongo-3.png" class="img-responsive" alt="Pongo">
+            </div>
+        </div>
     </div>
 </div>
 @stop

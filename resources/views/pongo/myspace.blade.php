@@ -21,6 +21,10 @@ such as a page specific styesheets.
 <div class="container">
     <div class="content">
         <h1>My Added Items</h1>
+        @if (sizeof($addedItems) == 0)
+            <b>You have not added any items. Why not add one?</b>
+        @endif
+        <br>
         <table class="table table-striped">
             <tr>
                 <td>Item</td>
@@ -52,6 +56,9 @@ such as a page specific styesheets.
             @endforeach
         </table>
         <h1>My Transactions</h1>
+        @if (sizeof($transactions) == 0)
+            <b>You have not made any transactions. Why not buy an item?</b>
+        @endif
         <table class="table table-striped">
             <tr>
                 <td>Transaction Date</td>
