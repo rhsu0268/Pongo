@@ -52,7 +52,7 @@ such as a page specific styesheets.
                         <input type="text" class="form-control" id="oneLineDescription" placeholder="One Line Description" name="oneLineDescription">
                     </div>
                     <div class="form-group">
-                        <label for="category">Price</label>
+                        <label for="category">Price ($)</label>
                         <input type="text" class="form-control" id="price" placeholder="Price" name="price">
                     </div>
                     <div class="form-group">

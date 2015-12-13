@@ -25,7 +25,7 @@ such as a page specific styesheets.
             <b>You have not added any items. Why not add one?</b>
         @endif
         <br>
-        <table class="table table-striped">
+        <table class="table table-striped table-hover">
             <tr>
                 <td>Item</td>
                 <td>Category</td>
@@ -59,7 +59,7 @@ such as a page specific styesheets.
         @if (sizeof($transactions) == 0)
             <b>You have not made any transactions. Why not buy an item?</b>
         @endif
-        <table class="table table-striped">
+        <table class="table table-striped table-hover">
             <tr>
                 <td>Transaction Date</td>
                 <td>Transaction Type</td>
@@ -70,7 +70,7 @@ such as a page specific styesheets.
             </tr>
             @foreach($transactions as $transaction)
             <tr>
-                <td>{{$transaction['transaction_date']}}</td>
+                <td>{{  $transaction['transaction_date'] }}</td>
                 <td>{{$transaction['transaction_type']}}</td>
                 <td>{{$transaction['item']}}</td>
                 <td>{{$transaction['category']}}</td>

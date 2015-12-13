@@ -22,7 +22,7 @@ such as a page specific styesheets.
         <div class="content">
             <h1>Items For Sale</h1>
 
-            <table class="table table-striped">
+            <table class="table table-striped table-hover">
                 <tr>
                     <td>Item</td>
                     <td>Category</td>
