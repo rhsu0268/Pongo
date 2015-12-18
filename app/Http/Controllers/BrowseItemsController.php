@@ -37,7 +37,7 @@ class BrowseItemsController extends Controller {
                 // save changes
                 $item->save();
 
-                \Session::flash('flash_message', 'You successfully made the item public for sale!');
+                \Session::flash('flash_message', 'You successfully made ' . $item->item . ' public for sale!');
             }
 
             // add the item to the public_items table

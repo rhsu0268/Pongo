@@ -74,7 +74,7 @@ such as a page specific styesheets.
                 <td>{{$transaction['transaction_type']}}</td>
                 <td>{{$transaction['item']}}</td>
                 <td>{{$transaction['category']}}</td>
-                <td>{{$transaction['price']}}</td>
+                <td>${{$transaction['price']}}</td>
                 <td>
                     <button type="button" class="btn btn-info" id="{{ $transaction['id'] }}" onClick="transactionClicked(this.id)">
                         More Info

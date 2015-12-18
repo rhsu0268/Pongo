@@ -88,7 +88,7 @@ class ReceiptDetailsController extends Controller {
         $transactionSell->total= $total;
         $transactionSell->save();
 
-        \Session::flash('flash_message', 'You successfully purchased the item!');
+        \Session::flash('flash_message', 'You successfully purchased the ' . $itemObject->item . '!');
 
         return view('pongo.receipt_details')->with(
             ['item' => $itemObject,

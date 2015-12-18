@@ -32,6 +32,7 @@ class MySpaceController extends Controller {
         // get all the transactions of the user
 
         $transactions = \App\Transaction::where('user_id', '=', \Auth::id())->get();
+
         //dump($transactions);
 
         $transactionArrays = array();

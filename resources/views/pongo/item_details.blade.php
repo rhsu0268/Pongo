@@ -54,7 +54,7 @@ such as a page specific styesheets.
                 <h3 class="panel-title">Price</h3>
             </div>
             <div class="panel-body">
-                {{$item->price}}
+                ${{$item->price}}
             </div>
         </div>
 
