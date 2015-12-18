@@ -10,7 +10,7 @@ Laravel application that will allow users to post the items that they wish to se
 users, view a history of transactions, and get real-time emails of their purchases in the form of a sales receipt.
 
 ## Demo
-Coming Soon!
+<https://www.youtube.com/watch?v=rHJwL5YzBMs>
 
 ## Details for teaching team
 
