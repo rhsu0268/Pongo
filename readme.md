@@ -34,6 +34,7 @@ them. I created two test users for this feature since the default are not actual
     - Delete: Users can delete an item that they have added. This will also work after they
     made the item public.
 7. Server-Side Error Validation: This was done on the add items page with all the fields.
+8. Sales Tax: I used a 10% sales tax for all transactions which might be excessive but made the calculations easy. 
 
 ## Outside code
 * Bootstrap: http://getbootstrap.com/
