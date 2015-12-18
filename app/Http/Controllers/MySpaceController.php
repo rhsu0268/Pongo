@@ -42,7 +42,7 @@ class MySpaceController extends Controller {
             $transactionArray = $transaction->public_item->toArray();
             //dump($transactionArray);
             $transactionArray["transaction_type"] = $transaction->transaction_type;
-            $transactionArray["transaction_date"] = $transaction->created_at->timezone('America/New_York')->format('h:i:s d/m/Y');
+            $transactionArray["transaction_date"] = $transaction->created_at->timezone('America/New_York')->format('m/d/Y h:i A');
 
 
             array_push($transactionArrays, $transactionArray);

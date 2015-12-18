@@ -57,13 +57,16 @@ such as a page specific styesheets.
                     </div>
                     <div class="form-group">
                         <label for="description">Detailed Description</label>
-                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="Enter a detailed description"></textarea>
+                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="Detailed Description"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-default">Add Item</button>
                 </form>
             </div>
             <div class="col-md-7">
+                <br>
+                <br>
+                <br>
                 <img src="/pongo-3.png" class="img-responsive" alt="Pongo">
             </div>
         </div>
