@@ -49,7 +49,7 @@ such as a page specific styesheets.
                     </button>
                     @endif
                     <button type="button" class="btn btn-danger" id="{{ $item['id'] }}" onClick="deleteItem(this.id)">
-                        Delete Item
+                        Delete
                     </button>
                 </td>
             </tr>
