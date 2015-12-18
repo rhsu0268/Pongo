@@ -43,7 +43,7 @@ such as a page specific styesheets.
                             <option value='Book'>Book</option>
                             <option value='Clothing'>Clothing</option>
                             <option value='Daily Life'>Daily Life</option>
-                            <option value='School Supplies'>School Supplies</option>
+                            <option value='School Supplies'>School Supply</option>
                             <option value='Technology'>Technology</option>
                        </select>
                     </div>
