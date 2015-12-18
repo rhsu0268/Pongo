@@ -24,7 +24,7 @@ class TransactionDetailsController extends Controller {
     public function getPage($id = null) {
 
         // get the transaction
-        $transaction = \App\Transaction::where('id', '=', $id)->first();
+        $transaction = \App\Transaction::where('public_item_id', '=', $id)->first();
         //dump($transaction);
 
         $transactionArray = $transaction->public_item->toArray();
