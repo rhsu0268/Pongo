@@ -41,3 +41,5 @@ them. I created two test users for this feature since the default are not actual
 * pongo-1.jpg: http://disneys101dalmatians.weebly.com/uploads/1/4/7/1/14716780/3380431_orig.jpg?0
 * pongo-2.jpg: http://images.amazon.com/images/G/01/dvd/aplus/101dalmatians/101dalmatians2lg.jpg
 * pongo-3.png: http://orig00.deviantart.net/28e9/f/2012/140/d/7/101_dalmatian_puppies_by_donkeyemma-d50h8pt.png
+* Laravel Packages:
+    - guzzlehttp/guzzle: https://github.com/guzzle/guzzle
