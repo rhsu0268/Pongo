@@ -31,12 +31,14 @@ class DeleteItemController extends Controller {
         //dump($item->make_public);
 
         // if it was made public, delete it from the public_items table
+        /*
         if ($item->make_public)
         {
             $publicItem = \App\PublicItem::where('one_line_description', '=', $item->one_line_description)->get();
             //dump($publicItem[0]);
             $publicItem[0]->delete();
         }
+        */
 
         \Session::flash('flash_message',$item->item.' was deleted.');
         return redirect('/myspace');
