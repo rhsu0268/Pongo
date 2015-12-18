@@ -47,5 +47,31 @@ class PublicItemsTableSeeder extends Seeder
        'detailed_description' => 'A very nice jacket to keep you warm from the winter.',
        'bought' => FALSE
        ]);
+
+       DB::table('public_items')->insert([
+       'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+       'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+       'user_id' => 3,
+       'item' => 'Coffee Mug',
+       'category' => 'Daily Life',
+       'one_line_description' => 'A Very Nice Coffee Mug for Winter!',
+       'price' => 5.99,
+       'detailed_description' => 'This is a very nice mug for making tea or coffee.',
+       'bought' => TRUE
+       ]);
+
+       DB::table('public_items')->insert([
+       'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+       'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+       'user_id' => 4,
+       'item' => 'Binder',
+       'category' => 'School Supply',
+       'one_line_description' => 'A nice binder for notes and classes!',
+       'price' => 5.99,
+       'detailed_description' => 'This is a nice binder that will get you through coursework.',
+       'bought' => TRUE
+       ]);
+
+
     }
 }
