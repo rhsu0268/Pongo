@@ -88,6 +88,11 @@ class ReceiptDetailsController extends Controller {
         $transactionSell->total= $total;
         $transactionSell->save();
 
+        // delete the item from the added_items
+        $addedItem = \App\AddedItem::where('one_line_description', '=', $item->one_line_description)->get();
+        //dump($publicItem[0]);
+        $addedItem[0]->delete();
+
         \Session::flash('flash_message', 'You successfully purchased the ' . $itemObject->item . '!');
 
         return view('pongo.receipt_details')->with(

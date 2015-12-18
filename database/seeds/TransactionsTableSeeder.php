@@ -24,7 +24,7 @@ class TransactionsTableSeeder extends Seeder
         'total' => 26.39
         ]);
 
-        $public_item_id = \App\PublicItem::where('item', '=', 'GWU Hoodie')->pluck('id');
+        $public_item_id = \App\PublicItem::where('item', '=', 'North Face Jacket')->pluck('id');
         DB::table('transactions')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),

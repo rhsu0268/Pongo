@@ -16,36 +16,36 @@ class AddedItemsTableSeeder extends Seeder
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
        'user_id' => 1,
-       'item' => 'Water Bottle',
-       'category' => 'Daily Life',
-       'one_line_description' => 'A Full 9 oz. Water Bottle Used But Still Like New',
-       'price' => 3.99,
-       'detailed_description' => 'This is a very good water bottle suitable for sports and also just daily outdoor activities.',
-       'make_public' => FALSE
+       'item' => 'Organic Chemistry Textbook',
+       'category' => 'Book',
+       'one_line_description' => 'A Well-Written Organic Chemistry Textbook For an A+ Student!',
+       'price' => 23.99,
+       'detailed_description' => 'This is a very good textbook for organic chemistry.',
+       'make_public' => TRUE
        ]);
 
        DB::table('added_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
        'user_id' => 2,
-       'item' => 'Laravel 5 Textbook',
-       'category' => 'Book',
-       'one_line_description' => 'A Laravel 5 Textbook for CSCIE15',
-       'price' => 10.99,
-       'detailed_description' => 'This Laravel 5 Textbook introduces you to the basics of Laravel and is a good guide for building dynamic web applications.',
-       'make_public' => FALSE
+       'item' => 'Headphones',
+       'category' => 'Technology',
+       'one_line_description' => 'A Pair of Nice i-phone Headphones For Good Enjoyment!',
+       'price' => 3.99,
+       'detailed_description' => 'Have you lose your headphones? Have no fear, this set of headphones is cheap and durable.',
+       'make_public' => TRUE
        ]);
 
        DB::table('added_items')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
        'user_id' => 1,
-       'item' => 'Red and Green Sweater',
+       'item' => 'North Face Jacket',
        'category' => 'Clothing',
-       'one_line_description' => 'A Nice Red and Green Sweater for the Holiday Season',
-       'price' => 7.99,
-       'detailed_description' => 'This red and green sweater is perfect for the Christmas season and will leave a happy smile on your face in the weeks to come.',
-       'make_public' => FALSE
+       'one_line_description' => 'A Very Warm North Face Jacket for Winter!',
+       'price' => 12.99,
+       'detailed_description' => 'A very nice jacket to keep you warm from the winter.',
+       'make_public' => TRUE
        ]);
     }
 }
