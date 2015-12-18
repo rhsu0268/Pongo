@@ -26,9 +26,9 @@
                 </h3>
 
                 <h3>
-                    Have no fear, Pongo is the very application on which you can post your items, buy other ones
+                    Have no fear, <b>Pongo</b> is the very application on which you can post your items, buy other ones
                     from your friends, and ultimately, clean out your dorms while making a little
-                    bit of money.
+                    bit of money. Create your account now and start adding items you want to sell!
                 </h3>
             </div>
         </div>
